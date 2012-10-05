@@ -1,0 +1,120 @@
+N:\DataBase\PIRKT_Solution\PIRKT\bin\Debug\PIRKT.exe
+N:\DataBase\PIRKT_Solution\PIRKT\bin\Debug\PIRKT.pdb
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\ResolveAssemblyReference.cache
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.MainForm.resources
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Properties.Resources.resources
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.csproj.GenerateResource.Cache
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.exe
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.pdb
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.About.resources
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.HomeForm.resources
+N:\DataBase\PIRKT_Solution\PIRKT\bin\Debug\PIRKT.exe.config
+C:\Documents and Settings\091mc199954.AUI\Desktop\PIRKT_Solution\PIRKT\bin\Debug\PIRKT.exe.config
+C:\Documents and Settings\091mc199954.AUI\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.exe
+C:\Documents and Settings\091mc199954.AUI\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.pdb
+C:\Documents and Settings\091mc199954.AUI\Desktop\PIRKT_Solution\PIRKT\bin\Debug\PIRKT.exe
+C:\Documents and Settings\091mc199954.AUI\Desktop\PIRKT_Solution\PIRKT\bin\Debug\PIRKT.pdb
+C:\Documents and Settings\091mc199954.AUI\Desktop\PIRKT_Solution\PIRKT\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\091mc199954.AUI\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.About.resources
+C:\Documents and Settings\091mc199954.AUI\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.HomeForm.resources
+C:\Documents and Settings\091mc199954.AUI\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.MainForm.resources
+C:\Documents and Settings\091mc199954.AUI\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.ManageInvoiceForm.resources
+C:\Documents and Settings\091mc199954.AUI\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.ManageOrderForm.resources
+C:\Documents and Settings\091mc199954.AUI\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Properties.Resources.resources
+C:\Documents and Settings\091mc199954.AUI\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.csproj.GenerateResource.Cache
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Order.ManageOrderForm.resources
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Invoice.ManageInvoiceForm.resources
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Vendor.AddVendorForm.resources
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Vendor.Form1.resources
+C:\Documents and Settings\091mc199954\Desktop\PIRKT_Solution\PIRKT\bin\Debug\PIRKT.exe.config
+C:\Documents and Settings\091mc199954\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.exe
+C:\Documents and Settings\091mc199954\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.pdb
+C:\Documents and Settings\091mc199954\Desktop\PIRKT_Solution\PIRKT\bin\Debug\PIRKT.exe
+C:\Documents and Settings\091mc199954\Desktop\PIRKT_Solution\PIRKT\bin\Debug\PIRKT.pdb
+C:\Documents and Settings\091mc199954\Desktop\PIRKT_Solution\PIRKT\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\091mc199954\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.About.resources
+C:\Documents and Settings\091mc199954\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.HomeForm.resources
+C:\Documents and Settings\091mc199954\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.MainForm.resources
+C:\Documents and Settings\091mc199954\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Invoice.ManageInvoiceForm.resources
+C:\Documents and Settings\091mc199954\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Order.ManageOrderForm.resources
+C:\Documents and Settings\091mc199954\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Vendor.AddVendorForm.resources
+C:\Documents and Settings\091mc199954\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Vendor.Form1.resources
+C:\Documents and Settings\091mc199954\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Properties.Resources.resources
+C:\Documents and Settings\091mc199954\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.csproj.GenerateResource.Cache
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Order.AddOrderForm.resources
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Invoice.AddInvoiceForm.resources
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Category.Category_form.resources
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Category.Add_Category.resources
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Category.Resources.resources
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Product.product_ADD.resources
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Product.ProductMGT.resources
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Customer.AddAccount.resources
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Customer.ManageAccounts.resources
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Statistics.DashBoard.resources
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Statistics.Form1.resources
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Statistics.Statistics.resources
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Statistics.Properties.Resources.resources
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.CreateAccount.resources
+N:\DataBase\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Login.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\bin\Debug\PIRKT.exe.config
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.exe
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.pdb
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\bin\Debug\PIRKT.exe
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\bin\Debug\PIRKT.pdb
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.About.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.HomeForm.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.MainForm.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Category.Add_Category.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Category.Category_form.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Category.Resources.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Invoice.AddInvoiceForm.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Invoice.ManageInvoiceForm.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Order.AddOrderForm.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Order.ManageOrderForm.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Product.product_ADD.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Product.ProductMGT.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Vendor.AddVendorForm.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Vendor.Form1.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Customer.AddAccount.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.CreateAccount.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Login.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Customer.ManageAccounts.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Properties.Resources.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Statistics.DashBoard.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Statistics.Form1.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Statistics.Properties.Resources.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Statistics.Statistics.resources
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.csproj.GenerateResource.Cache
+C:\Documents and Settings\071a661718\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Category.Modify.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\bin\Debug\PIRKT.exe.config
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.exe
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.pdb
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\bin\Debug\PIRKT.exe
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\bin\Debug\PIRKT.pdb
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.About.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.HomeForm.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.MainForm.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Category.Add_Category.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Category.Category_form.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Category.Modify.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Category.Resources.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Invoice.AddInvoiceForm.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Invoice.ManageInvoiceForm.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Order.AddOrderForm.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Order.ManageOrderForm.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Product.product_ADD.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Product.ProductMGT.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Vendor.AddVendorForm.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Vendor.Form1.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Customer.AddAccount.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.CreateAccount.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Login.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Manage_Customer.ManageAccounts.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Properties.Resources.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Statistics.DashBoard.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Statistics.Form1.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Statistics.Properties.Resources.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.Statistics.Statistics.resources
+C:\Documents and Settings\082mc186427\Desktop\PIRKT_Solution\PIRKT\obj\Debug\PIRKT.csproj.GenerateResource.Cache

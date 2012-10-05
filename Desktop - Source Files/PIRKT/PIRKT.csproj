@@ -1,0 +1,401 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{790F8A35-7DB8-4EAC-AB0B-304831EB2954}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PIRKT</RootNamespace>
+    <AssemblyName>PIRKT</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetMagic, Version=6.0.0.0, Culture=neutral, PublicKeyToken=9bf68ea376edccab, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeForm.Designer.cs">
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="invoiceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>invoiceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Category\Add_Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Category\Add_Category.designer.cs">
+      <DependentUpon>Add_Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Category\Category_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Category\Category_form.designer.cs">
+      <DependentUpon>Category_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Category\khobalatte_aDataSet.cs">
+      <DependentUpon>khobalatte_aDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Manage Category\khobalatte_aDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>khobalatte_aDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Category\Modify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Category\Modify.Designer.cs">
+      <DependentUpon>Modify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Category\Resources.Designer.cs" />
+    <Compile Include="Manage Category\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Invoice\AddInvoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Invoice\AddInvoiceForm.Designer.cs">
+      <DependentUpon>AddInvoiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Invoice\ManageInvoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Invoice\ManageInvoiceForm.Designer.cs">
+      <DependentUpon>ManageInvoiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Order\AddOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Order\AddOrderForm.Designer.cs">
+      <DependentUpon>AddOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Order\ManageOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Order\ManageOrderForm.Designer.cs">
+      <DependentUpon>ManageOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Product\Add_Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Product\Add_Product.designer.cs">
+      <DependentUpon>Add_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Product\productMGT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Product\productMGT.designer.cs">
+      <DependentUpon>productMGT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Vendor\AddVendorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Vendor\AddVendorForm.Designer.cs">
+      <DependentUpon>AddVendorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage Vendor\ManageVendorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage Vendor\ManageVendorForm.Designer.cs">
+      <DependentUpon>ManageVendorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_Customer\AddAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_Customer\AddAccount.designer.cs">
+      <DependentUpon>AddAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAccount.designer.cs">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_Customer\ManageAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_Customer\ManageAccounts.designer.cs">
+      <DependentUpon>ManageAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <EmbeddedResource Include="About.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>HomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Category\Add_Category.resx">
+      <DependentUpon>Add_Category.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Category\Category_form.resx">
+      <DependentUpon>Category_form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Category\Modify.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Modify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Category\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Invoice\AddInvoiceForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddInvoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Invoice\ManageInvoiceForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ManageInvoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Order\AddOrderForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Order\ManageOrderForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ManageOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Product\Add_Product.resx">
+      <DependentUpon>Add_Product.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Product\productMGT.resx">
+      <DependentUpon>productMGT.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Vendor\AddVendorForm.resx">
+      <DependentUpon>AddVendorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage Vendor\ManageVendorForm.resx">
+      <DependentUpon>ManageVendorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_Customer\AddAccount.resx">
+      <DependentUpon>AddAccount.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAccount.resx">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_Customer\ManageAccounts.resx">
+      <DependentUpon>ManageAccounts.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics\DashBoard.resx">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics\Properties\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics\Statistics.resx">
+      <DependentUpon>Statistics.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="invoiceDataSet.xsc">
+      <DependentUpon>invoiceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="invoiceDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>invoiceDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="invoiceDataSet.xss">
+      <DependentUpon>invoiceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Manage Category\khobalatte_aDataSet.xsc">
+      <DependentUpon>khobalatte_aDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Manage Category\khobalatte_aDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>khobalatte_aDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Manage Category\khobalatte_aDataSet.xss">
+      <DependentUpon>khobalatte_aDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Manage Category\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Statistics\Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Statistics\unpaid.xsc">
+      <DependentUpon>unpaid.xsd</DependentUpon>
+    </None>
+    <None Include="Statistics\unpaid.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>unpaid.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Statistics\unpaid.xss">
+      <DependentUpon>unpaid.xsd</DependentUpon>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Statistics\DashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics\DashBoard.designer.cs">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics\Form1.designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics\Properties\AssemblyInfo.cs" />
+    <Compile Include="Statistics\Properties\Resources.Designer.cs" />
+    <Compile Include="Statistics\Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics\Statistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistics\Statistics.designer.cs">
+      <DependentUpon>Statistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics\unpaid.cs">
+      <DependentUpon>unpaid.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Statistics\unpaid.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>unpaid.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login admin copy1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add account.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Interactive_Icon_by_dellustrations copy.png" />
+    <None Include="Resources\invoice mgt.png" />
+    <None Include="Resources\accounts mgt.png" />
+    <None Include="Resources\accounts mgt1.png" />
+    <None Include="Resources\account.png" />
+    <None Include="Resources\category.png" />
+    <None Include="Resources\invoice.png" />
+    <None Include="Resources\admin.png" />
+    <None Include="Resources\about copy.png" />
+    <None Include="Resources\home.png" />
+    <None Include="Resources\edit copy.PNG" />
+    <Content Include="Resources\login admin copy.png" />
+    <None Include="Resources\Manage Categories copy.PNG" />
+    <None Include="Resources\Manage Categories copy1.PNG" />
+    <None Include="Resources\Manage Categories copy2.PNG" />
+    <None Include="Resources\Manage Categories copy3.PNG" />
+    <None Include="Resources\manage product copy.PNG" />
+    <None Include="Resources\manage product copy1.PNG" />
+    <None Include="Resources\Order mgt copy.png" />
+    <None Include="Resources\manage product copy2.PNG" />
+    <None Include="Resources\manage customers.png" />
+    <None Include="Resources\order.png" />
+    <Content Include="Resources\Pikachu_Icon__free__by_Aminako.gif" />
+    <None Include="Resources\vendor1.png" />
+    <None Include="Resources\vendor.png" />
+    <None Include="Resources\test copy.png" />
+    <None Include="Resources\vendor mgt copy.png" />
+    <None Include="Resources\view2.png" />
+    <None Include="Resources\view1.png" />
+    <None Include="Resources\view.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

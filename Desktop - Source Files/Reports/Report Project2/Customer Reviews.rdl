@@ -1,0 +1,1403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <DataSources>
+    <DataSource Name="khobalatte_a">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=SSEDB;Initial Catalog=khobalatte_a</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>c2db35cd-11ef-48fa-bf21-fd0a478616a2</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Fields>
+        <Field Name="PRO_DESCRIPT">
+          <DataField>PRO_DESCRIPT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="total_rate">
+          <DataField>total_rate</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PRO_NAME">
+          <DataField>PRO_NAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CAT_NAME">
+          <DataField>CAT_NAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REV_DATE">
+          <DataField>REV_DATE</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="REV_RATE">
+          <DataField>REV_RATE</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="REV_TITLE">
+          <DataField>REV_TITLE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="REV_TEXT">
+          <DataField>REV_TEXT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CUS_LNAME">
+          <DataField>CUS_LNAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CUS_FNAME">
+          <DataField>CUS_FNAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>khobalatte_a</DataSourceName>
+        <CommandText>SELECT     p.PRO_DESCRIPT, SUM(r.REV_RATE) AS total_rate, p.PRO_NAME, c.CAT_NAME,r.REV_DATE as rev_date, r.REV_RATE, r.REV_TITLE, r.REV_TEXT, cu.CUS_LNAME, 
+                      cu.CUS_FNAME
+FROM         PRODUCT AS p INNER JOIN
+                      REVIEW AS r ON p.PRO_ID = r.PRO_ID INNER JOIN
+                      CUSTOMER AS cu ON r.CUS_ID = cu.CUS_ID INNER JOIN
+                      VENDOR AS v ON p.VED_ID = v.VED_ID INNER JOIN
+                      CATEGORY AS c ON p.CAT_ID = c.CAT_ID
+GROUP BY p.PRO_DESCRIPT, p.PRO_NAME, c.CAT_NAME, r.REV_DATE, r.REV_RATE, r.REV_TITLE, r.REV_TEXT, cu.CUS_LNAME, cu.CUS_FNAME</CommandText>
+      </Query>
+    </DataSet>
+  </DataSets>
+  <Body>
+    <ReportItems>
+      <Tablix Name="List1">
+        <TablixBody>
+          <TablixColumns>
+            <TablixColumn>
+              <Width>6in</Width>
+            </TablixColumn>
+          </TablixColumns>
+          <TablixRows>
+            <TablixRow>
+              <Height>2.47667in</Height>
+              <TablixCells>
+                <TablixCell>
+                  <CellContents>
+                    <Rectangle Name="List1_Contents">
+                      <ReportItems>
+                        <Tablix Name="List2">
+                          <TablixBody>
+                            <TablixColumns>
+                              <TablixColumn>
+                                <Width>6in</Width>
+                              </TablixColumn>
+                            </TablixColumns>
+                            <TablixRows>
+                              <TablixRow>
+                                <Height>1.64in</Height>
+                                <TablixCells>
+                                  <TablixCell>
+                                    <CellContents>
+                                      <Rectangle Name="List2_Contents">
+                                        <ReportItems>
+                                          <Tablix Name="List3">
+                                            <TablixBody>
+                                              <TablixColumns>
+                                                <TablixColumn>
+                                                  <Width>6in</Width>
+                                                </TablixColumn>
+                                              </TablixColumns>
+                                              <TablixRows>
+                                                <TablixRow>
+                                                  <Height>1.14in</Height>
+                                                  <TablixCells>
+                                                    <TablixCell>
+                                                      <CellContents>
+                                                        <Rectangle Name="List3_Contents">
+                                                          <ReportItems>
+                                                            <Tablix Name="table1">
+                                                              <TablixBody>
+                                                                <TablixColumns>
+                                                                  <TablixColumn>
+                                                                    <Width>1in</Width>
+                                                                  </TablixColumn>
+                                                                  <TablixColumn>
+                                                                    <Width>1in</Width>
+                                                                  </TablixColumn>
+                                                                  <TablixColumn>
+                                                                    <Width>1in</Width>
+                                                                  </TablixColumn>
+                                                                  <TablixColumn>
+                                                                    <Width>1in</Width>
+                                                                  </TablixColumn>
+                                                                  <TablixColumn>
+                                                                    <Width>1in</Width>
+                                                                  </TablixColumn>
+                                                                  <TablixColumn>
+                                                                    <Width>1in</Width>
+                                                                  </TablixColumn>
+                                                                </TablixColumns>
+                                                                <TablixRows>
+                                                                  <TablixRow>
+                                                                    <Height>0.22in</Height>
+                                                                    <TablixCells>
+                                                                      <TablixCell>
+                                                                        <CellContents>
+                                                                          <Textbox Name="textbox2">
+                                                                            <CanGrow>true</CanGrow>
+                                                                            <KeepTogether>true</KeepTogether>
+                                                                            <Paragraphs>
+                                                                              <Paragraph>
+                                                                                <TextRuns>
+                                                                                  <TextRun>
+                                                                                    <Value>REV DATE</Value>
+                                                                                    <Style>
+                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                      <FontSize>11pt</FontSize>
+                                                                                      <FontWeight>Bold</FontWeight>
+                                                                                      <Color>White</Color>
+                                                                                    </Style>
+                                                                                  </TextRun>
+                                                                                </TextRuns>
+                                                                                <Style />
+                                                                              </Paragraph>
+                                                                            </Paragraphs>
+                                                                            <rd:DefaultName>textbox2</rd:DefaultName>
+                                                                            <Style>
+                                                                              <Border>
+                                                                                <Color>LightGrey</Color>
+                                                                                <Style>Solid</Style>
+                                                                              </Border>
+                                                                              <BackgroundColor>SteelBlue</BackgroundColor>
+                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                            </Style>
+                                                                          </Textbox>
+                                                                        </CellContents>
+                                                                      </TablixCell>
+                                                                      <TablixCell>
+                                                                        <CellContents>
+                                                                          <Textbox Name="textbox4">
+                                                                            <CanGrow>true</CanGrow>
+                                                                            <KeepTogether>true</KeepTogether>
+                                                                            <Paragraphs>
+                                                                              <Paragraph>
+                                                                                <TextRuns>
+                                                                                  <TextRun>
+                                                                                    <Value>CUS LNAME</Value>
+                                                                                    <Style>
+                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                      <FontSize>11pt</FontSize>
+                                                                                      <FontWeight>Bold</FontWeight>
+                                                                                      <Color>White</Color>
+                                                                                    </Style>
+                                                                                  </TextRun>
+                                                                                </TextRuns>
+                                                                                <Style />
+                                                                              </Paragraph>
+                                                                            </Paragraphs>
+                                                                            <rd:DefaultName>textbox4</rd:DefaultName>
+                                                                            <Style>
+                                                                              <Border>
+                                                                                <Color>LightGrey</Color>
+                                                                                <Style>Solid</Style>
+                                                                              </Border>
+                                                                              <BackgroundColor>SteelBlue</BackgroundColor>
+                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                            </Style>
+                                                                          </Textbox>
+                                                                        </CellContents>
+                                                                      </TablixCell>
+                                                                      <TablixCell>
+                                                                        <CellContents>
+                                                                          <Textbox Name="textbox5">
+                                                                            <CanGrow>true</CanGrow>
+                                                                            <KeepTogether>true</KeepTogether>
+                                                                            <Paragraphs>
+                                                                              <Paragraph>
+                                                                                <TextRuns>
+                                                                                  <TextRun>
+                                                                                    <Value>CUS FNAME</Value>
+                                                                                    <Style>
+                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                      <FontSize>11pt</FontSize>
+                                                                                      <FontWeight>Bold</FontWeight>
+                                                                                      <Color>White</Color>
+                                                                                    </Style>
+                                                                                  </TextRun>
+                                                                                </TextRuns>
+                                                                                <Style />
+                                                                              </Paragraph>
+                                                                            </Paragraphs>
+                                                                            <rd:DefaultName>textbox5</rd:DefaultName>
+                                                                            <Style>
+                                                                              <Border>
+                                                                                <Color>LightGrey</Color>
+                                                                                <Style>Solid</Style>
+                                                                              </Border>
+                                                                              <BackgroundColor>SteelBlue</BackgroundColor>
+                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                            </Style>
+                                                                          </Textbox>
+                                                                        </CellContents>
+                                                                      </TablixCell>
+                                                                      <TablixCell>
+                                                                        <CellContents>
+                                                                          <Textbox Name="textbox6">
+                                                                            <CanGrow>true</CanGrow>
+                                                                            <KeepTogether>true</KeepTogether>
+                                                                            <Paragraphs>
+                                                                              <Paragraph>
+                                                                                <TextRuns>
+                                                                                  <TextRun>
+                                                                                    <Value>REV RATE</Value>
+                                                                                    <Style>
+                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                      <FontSize>11pt</FontSize>
+                                                                                      <FontWeight>Bold</FontWeight>
+                                                                                      <Color>White</Color>
+                                                                                    </Style>
+                                                                                  </TextRun>
+                                                                                </TextRuns>
+                                                                                <Style>
+                                                                                  <TextAlign>Right</TextAlign>
+                                                                                </Style>
+                                                                              </Paragraph>
+                                                                            </Paragraphs>
+                                                                            <rd:DefaultName>textbox6</rd:DefaultName>
+                                                                            <Style>
+                                                                              <Border>
+                                                                                <Color>LightGrey</Color>
+                                                                                <Style>Solid</Style>
+                                                                              </Border>
+                                                                              <BackgroundColor>SteelBlue</BackgroundColor>
+                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                            </Style>
+                                                                          </Textbox>
+                                                                        </CellContents>
+                                                                      </TablixCell>
+                                                                      <TablixCell>
+                                                                        <CellContents>
+                                                                          <Textbox Name="textbox7">
+                                                                            <CanGrow>true</CanGrow>
+                                                                            <KeepTogether>true</KeepTogether>
+                                                                            <Paragraphs>
+                                                                              <Paragraph>
+                                                                                <TextRuns>
+                                                                                  <TextRun>
+                                                                                    <Value>REV TITLE</Value>
+                                                                                    <Style>
+                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                      <FontSize>11pt</FontSize>
+                                                                                      <FontWeight>Bold</FontWeight>
+                                                                                      <Color>White</Color>
+                                                                                    </Style>
+                                                                                  </TextRun>
+                                                                                </TextRuns>
+                                                                                <Style />
+                                                                              </Paragraph>
+                                                                            </Paragraphs>
+                                                                            <rd:DefaultName>textbox7</rd:DefaultName>
+                                                                            <Style>
+                                                                              <Border>
+                                                                                <Color>LightGrey</Color>
+                                                                                <Style>Solid</Style>
+                                                                              </Border>
+                                                                              <BackgroundColor>SteelBlue</BackgroundColor>
+                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                            </Style>
+                                                                          </Textbox>
+                                                                        </CellContents>
+                                                                      </TablixCell>
+                                                                      <TablixCell>
+                                                                        <CellContents>
+                                                                          <Textbox Name="textbox8">
+                                                                            <CanGrow>true</CanGrow>
+                                                                            <KeepTogether>true</KeepTogether>
+                                                                            <Paragraphs>
+                                                                              <Paragraph>
+                                                                                <TextRuns>
+                                                                                  <TextRun>
+                                                                                    <Value>REV TEXT</Value>
+                                                                                    <Style>
+                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                      <FontSize>11pt</FontSize>
+                                                                                      <FontWeight>Bold</FontWeight>
+                                                                                      <Color>White</Color>
+                                                                                    </Style>
+                                                                                  </TextRun>
+                                                                                </TextRuns>
+                                                                                <Style />
+                                                                              </Paragraph>
+                                                                            </Paragraphs>
+                                                                            <rd:DefaultName>textbox8</rd:DefaultName>
+                                                                            <Style>
+                                                                              <Border>
+                                                                                <Color>LightGrey</Color>
+                                                                                <Style>Solid</Style>
+                                                                              </Border>
+                                                                              <BackgroundColor>SteelBlue</BackgroundColor>
+                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                            </Style>
+                                                                          </Textbox>
+                                                                        </CellContents>
+                                                                      </TablixCell>
+                                                                    </TablixCells>
+                                                                  </TablixRow>
+                                                                  <TablixRow>
+                                                                    <Height>0.21in</Height>
+                                                                    <TablixCells>
+                                                                      <TablixCell>
+                                                                        <CellContents>
+                                                                          <Textbox Name="REV_DATE">
+                                                                            <CanGrow>true</CanGrow>
+                                                                            <KeepTogether>true</KeepTogether>
+                                                                            <Paragraphs>
+                                                                              <Paragraph>
+                                                                                <TextRuns>
+                                                                                  <TextRun>
+                                                                                    <Value>=Fields!REV_DATE.Value</Value>
+                                                                                    <Style>
+                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                      <FontWeight>Bold</FontWeight>
+                                                                                      <Color>White</Color>
+                                                                                    </Style>
+                                                                                  </TextRun>
+                                                                                </TextRuns>
+                                                                                <Style />
+                                                                              </Paragraph>
+                                                                            </Paragraphs>
+                                                                            <rd:DefaultName>REV_DATE</rd:DefaultName>
+                                                                            <Style>
+                                                                              <Border>
+                                                                                <Color>LightGrey</Color>
+                                                                                <Style>Solid</Style>
+                                                                              </Border>
+                                                                              <BackgroundColor>#6e9eca</BackgroundColor>
+                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                            </Style>
+                                                                          </Textbox>
+                                                                        </CellContents>
+                                                                      </TablixCell>
+                                                                      <TablixCell>
+                                                                        <CellContents>
+                                                                          <Textbox Name="textbox9">
+                                                                            <CanGrow>true</CanGrow>
+                                                                            <KeepTogether>true</KeepTogether>
+                                                                            <Paragraphs>
+                                                                              <Paragraph>
+                                                                                <TextRuns>
+                                                                                  <TextRun>
+                                                                                    <Value />
+                                                                                    <Style>
+                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                      <FontWeight>Bold</FontWeight>
+                                                                                      <Color>White</Color>
+                                                                                    </Style>
+                                                                                  </TextRun>
+                                                                                </TextRuns>
+                                                                                <Style />
+                                                                              </Paragraph>
+                                                                            </Paragraphs>
+                                                                            <rd:DefaultName>textbox9</rd:DefaultName>
+                                                                            <Style>
+                                                                              <Border>
+                                                                                <Color>LightGrey</Color>
+                                                                                <Style>Solid</Style>
+                                                                              </Border>
+                                                                              <BackgroundColor>#6e9eca</BackgroundColor>
+                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                            </Style>
+                                                                          </Textbox>
+                                                                        </CellContents>
+                                                                      </TablixCell>
+                                                                      <TablixCell>
+                                                                        <CellContents>
+                                                                          <Textbox Name="textbox10">
+                                                                            <CanGrow>true</CanGrow>
+                                                                            <KeepTogether>true</KeepTogether>
+                                                                            <Paragraphs>
+                                                                              <Paragraph>
+                                                                                <TextRuns>
+                                                                                  <TextRun>
+                                                                                    <Value />
+                                                                                    <Style>
+                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                      <FontWeight>Bold</FontWeight>
+                                                                                      <Color>White</Color>
+                                                                                    </Style>
+                                                                                  </TextRun>
+                                                                                </TextRuns>
+                                                                                <Style />
+                                                                              </Paragraph>
+                                                                            </Paragraphs>
+                                                                            <rd:DefaultName>textbox10</rd:DefaultName>
+                                                                            <Style>
+                                                                              <Border>
+                                                                                <Color>LightGrey</Color>
+                                                                                <Style>Solid</Style>
+                                                                              </Border>
+                                                                              <BackgroundColor>#6e9eca</BackgroundColor>
+                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                            </Style>
+                                                                          </Textbox>
+                                                                        </CellContents>
+                                                                      </TablixCell>
+                                                                      <TablixCell>
+                                                                        <CellContents>
+                                                                          <Textbox Name="textbox11">
+                                                                            <CanGrow>true</CanGrow>
+                                                                            <KeepTogether>true</KeepTogether>
+                                                                            <Paragraphs>
+                                                                              <Paragraph>
+                                                                                <TextRuns>
+                                                                                  <TextRun>
+                                                                                    <Value />
+                                                                                    <Style>
+                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                      <FontWeight>Bold</FontWeight>
+                                                                                      <Color>White</Color>
+                                                                                    </Style>
+                                                                                  </TextRun>
+                                                                                </TextRuns>
+                                                                                <Style />
+                                                                              </Paragraph>
+                                                                            </Paragraphs>
+                                                                            <rd:DefaultName>textbox11</rd:DefaultName>
+                                                                            <Style>
+                                                                              <Border>
+                                                                                <Color>LightGrey</Color>
+                                                                                <Style>Solid</Style>
+                                                                              </Border>
+                                                                              <BackgroundColor>#6e9eca</BackgroundColor>
+                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                            </Style>
+                                                                          </Textbox>
+                                                                        </CellContents>
+                                                                      </TablixCell>
+                                                                      <TablixCell>
+                                                                        <CellContents>
+                                                                          <Textbox Name="textbox12">
+                                                                            <CanGrow>true</CanGrow>
+                                                                            <KeepTogether>true</KeepTogether>
+                                                                            <Paragraphs>
+                                                                              <Paragraph>
+                                                                                <TextRuns>
+                                                                                  <TextRun>
+                                                                                    <Value />
+                                                                                    <Style>
+                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                      <FontWeight>Bold</FontWeight>
+                                                                                      <Color>White</Color>
+                                                                                    </Style>
+                                                                                  </TextRun>
+                                                                                </TextRuns>
+                                                                                <Style />
+                                                                              </Paragraph>
+                                                                            </Paragraphs>
+                                                                            <rd:DefaultName>textbox12</rd:DefaultName>
+                                                                            <Style>
+                                                                              <Border>
+                                                                                <Color>LightGrey</Color>
+                                                                                <Style>Solid</Style>
+                                                                              </Border>
+                                                                              <BackgroundColor>#6e9eca</BackgroundColor>
+                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                            </Style>
+                                                                          </Textbox>
+                                                                        </CellContents>
+                                                                      </TablixCell>
+                                                                      <TablixCell>
+                                                                        <CellContents>
+                                                                          <Textbox Name="textbox13">
+                                                                            <CanGrow>true</CanGrow>
+                                                                            <KeepTogether>true</KeepTogether>
+                                                                            <Paragraphs>
+                                                                              <Paragraph>
+                                                                                <TextRuns>
+                                                                                  <TextRun>
+                                                                                    <Value />
+                                                                                    <Style>
+                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                      <FontWeight>Bold</FontWeight>
+                                                                                      <Color>White</Color>
+                                                                                    </Style>
+                                                                                  </TextRun>
+                                                                                </TextRuns>
+                                                                                <Style />
+                                                                              </Paragraph>
+                                                                            </Paragraphs>
+                                                                            <rd:DefaultName>textbox13</rd:DefaultName>
+                                                                            <Style>
+                                                                              <Border>
+                                                                                <Color>LightGrey</Color>
+                                                                                <Style>Solid</Style>
+                                                                              </Border>
+                                                                              <BackgroundColor>#6e9eca</BackgroundColor>
+                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                            </Style>
+                                                                          </Textbox>
+                                                                        </CellContents>
+                                                                      </TablixCell>
+                                                                    </TablixCells>
+                                                                  </TablixRow>
+                                                                  <TablixRow>
+                                                                    <Height>0.21in</Height>
+                                                                    <TablixCells>
+                                                                      <TablixCell>
+                                                                        <CellContents>
+                                                                          <Textbox Name="textbox3">
+                                                                            <CanGrow>true</CanGrow>
+                                                                            <KeepTogether>true</KeepTogether>
+                                                                            <Paragraphs>
+                                                                              <Paragraph>
+                                                                                <TextRuns>
+                                                                                  <TextRun>
+                                                                                    <Value />
+                                                                                    <Style>
+                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                    </Style>
+                                                                                  </TextRun>
+                                                                                </TextRuns>
+                                                                                <Style />
+                                                                              </Paragraph>
+                                                                            </Paragraphs>
+                                                                            <rd:DefaultName>textbox3</rd:DefaultName>
+                                                                            <Style>
+                                                                              <Border>
+                                                                                <Color>LightGrey</Color>
+                                                                                <Style>Solid</Style>
+                                                                              </Border>
+                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                            </Style>
+                                                                          </Textbox>
+                                                                        </CellContents>
+                                                                      </TablixCell>
+                                                                      <TablixCell>
+                                                                        <CellContents>
+                                                                          <Textbox Name="CUS_LNAME">
+                                                                            <CanGrow>true</CanGrow>
+                                                                            <KeepTogether>true</KeepTogether>
+                                                                            <Paragraphs>
+                                                                              <Paragraph>
+                                                                                <TextRuns>
+                                                                                  <TextRun>
+                                                                                    <Value>=Fields!CUS_LNAME.Value</Value>
+                                                                                    <Style>
+                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                    </Style>
+                                                                                  </TextRun>
+                                                                                </TextRuns>
+                                                                                <Style />
+                                                                              </Paragraph>
+                                                                            </Paragraphs>
+                                                                            <rd:DefaultName>CUS_LNAME</rd:DefaultName>
+                                                                            <Style>
+                                                                              <Border>
+                                                                                <Color>LightGrey</Color>
+                                                                                <Style>Solid</Style>
+                                                                              </Border>
+                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                            </Style>
+                                                                          </Textbox>
+                                                                        </CellContents>
+                                                                      </TablixCell>
+                                                                      <TablixCell>
+                                                                        <CellContents>
+                                                                          <Textbox Name="CUS_FNAME">
+                                                                            <CanGrow>true</CanGrow>
+                                                                            <KeepTogether>true</KeepTogether>
+                                                                            <Paragraphs>
+                                                                              <Paragraph>
+                                                                                <TextRuns>
+                                                                                  <TextRun>
+                                                                                    <Value>=Fields!CUS_FNAME.Value</Value>
+                                                                                    <Style>
+                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                    </Style>
+                                                                                  </TextRun>
+                                                                                </TextRuns>
+                                                                                <Style />
+                                                                              </Paragraph>
+                                                                            </Paragraphs>
+                                                                            <rd:DefaultName>CUS_FNAME</rd:DefaultName>
+                                                                            <Style>
+                                                                              <Border>
+                                                                                <Color>LightGrey</Color>
+                                                                                <Style>Solid</Style>
+                                                                              </Border>
+                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                            </Style>
+                                                                          </Textbox>
+                                                                        </CellContents>
+                                                                      </TablixCell>
+                                                                      <TablixCell>
+                                                                        <CellContents>
+                                                                          <Textbox Name="REV_RATE">
+                                                                            <CanGrow>true</CanGrow>
+                                                                            <KeepTogether>true</KeepTogether>
+                                                                            <Paragraphs>
+                                                                              <Paragraph>
+                                                                                <TextRuns>
+                                                                                  <TextRun>
+                                                                                    <Value>=Fields!REV_RATE.Value</Value>
+                                                                                    <Style>
+                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                    </Style>
+                                                                                  </TextRun>
+                                                                                </TextRuns>
+                                                                                <Style />
+                                                                              </Paragraph>
+                                                                            </Paragraphs>
+                                                                            <rd:DefaultName>REV_RATE</rd:DefaultName>
+                                                                            <Style>
+                                                                              <Border>
+                                                                                <Color>LightGrey</Color>
+                                                                                <Style>Solid</Style>
+                                                                              </Border>
+                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                            </Style>
+                                                                          </Textbox>
+                                                                        </CellContents>
+                                                                      </TablixCell>
+                                                                      <TablixCell>
+                                                                        <CellContents>
+                                                                          <Textbox Name="REV_TITLE">
+                                                                            <CanGrow>true</CanGrow>
+                                                                            <KeepTogether>true</KeepTogether>
+                                                                            <Paragraphs>
+                                                                              <Paragraph>
+                                                                                <TextRuns>
+                                                                                  <TextRun>
+                                                                                    <Value>=Fields!REV_TITLE.Value</Value>
+                                                                                    <Style>
+                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                    </Style>
+                                                                                  </TextRun>
+                                                                                </TextRuns>
+                                                                                <Style />
+                                                                              </Paragraph>
+                                                                            </Paragraphs>
+                                                                            <rd:DefaultName>REV_TITLE</rd:DefaultName>
+                                                                            <Style>
+                                                                              <Border>
+                                                                                <Color>LightGrey</Color>
+                                                                                <Style>Solid</Style>
+                                                                              </Border>
+                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                            </Style>
+                                                                          </Textbox>
+                                                                        </CellContents>
+                                                                      </TablixCell>
+                                                                      <TablixCell>
+                                                                        <CellContents>
+                                                                          <Textbox Name="REV_TEXT">
+                                                                            <CanGrow>true</CanGrow>
+                                                                            <KeepTogether>true</KeepTogether>
+                                                                            <Paragraphs>
+                                                                              <Paragraph>
+                                                                                <TextRuns>
+                                                                                  <TextRun>
+                                                                                    <Value>=Fields!REV_TEXT.Value</Value>
+                                                                                    <Style>
+                                                                                      <FontFamily>Tahoma</FontFamily>
+                                                                                    </Style>
+                                                                                  </TextRun>
+                                                                                </TextRuns>
+                                                                                <Style />
+                                                                              </Paragraph>
+                                                                            </Paragraphs>
+                                                                            <rd:DefaultName>REV_TEXT</rd:DefaultName>
+                                                                            <Style>
+                                                                              <Border>
+                                                                                <Color>LightGrey</Color>
+                                                                                <Style>Solid</Style>
+                                                                              </Border>
+                                                                              <PaddingLeft>2pt</PaddingLeft>
+                                                                              <PaddingRight>2pt</PaddingRight>
+                                                                              <PaddingTop>2pt</PaddingTop>
+                                                                              <PaddingBottom>2pt</PaddingBottom>
+                                                                            </Style>
+                                                                          </Textbox>
+                                                                        </CellContents>
+                                                                      </TablixCell>
+                                                                    </TablixCells>
+                                                                  </TablixRow>
+                                                                </TablixRows>
+                                                              </TablixBody>
+                                                              <TablixColumnHierarchy>
+                                                                <TablixMembers>
+                                                                  <TablixMember />
+                                                                  <TablixMember />
+                                                                  <TablixMember />
+                                                                  <TablixMember />
+                                                                  <TablixMember />
+                                                                  <TablixMember />
+                                                                </TablixMembers>
+                                                              </TablixColumnHierarchy>
+                                                              <TablixRowHierarchy>
+                                                                <TablixMembers>
+                                                                  <TablixMember>
+                                                                    <KeepWithGroup>After</KeepWithGroup>
+                                                                    <RepeatOnNewPage>true</RepeatOnNewPage>
+                                                                    <KeepTogether>true</KeepTogether>
+                                                                  </TablixMember>
+                                                                  <TablixMember>
+                                                                    <Group Name="table1_REV_DATE">
+                                                                      <GroupExpressions>
+                                                                        <GroupExpression>=Fields!REV_DATE.Value</GroupExpression>
+                                                                      </GroupExpressions>
+                                                                    </Group>
+                                                                    <SortExpressions>
+                                                                      <SortExpression>
+                                                                        <Value>=Fields!REV_DATE.Value</Value>
+                                                                      </SortExpression>
+                                                                    </SortExpressions>
+                                                                    <TablixMembers>
+                                                                      <TablixMember>
+                                                                        <KeepWithGroup>After</KeepWithGroup>
+                                                                        <KeepTogether>true</KeepTogether>
+                                                                      </TablixMember>
+                                                                      <TablixMember>
+                                                                        <Group Name="table1_Details_Group">
+                                                                          <DataElementName>Detail</DataElementName>
+                                                                        </Group>
+                                                                        <TablixMembers>
+                                                                          <TablixMember />
+                                                                        </TablixMembers>
+                                                                        <Visibility>
+                                                                          <Hidden>true</Hidden>
+                                                                          <ToggleItem>REV_DATE</ToggleItem>
+                                                                        </Visibility>
+                                                                        <DataElementName>Detail_Collection</DataElementName>
+                                                                        <DataElementOutput>Output</DataElementOutput>
+                                                                        <KeepTogether>true</KeepTogether>
+                                                                      </TablixMember>
+                                                                    </TablixMembers>
+                                                                  </TablixMember>
+                                                                </TablixMembers>
+                                                              </TablixRowHierarchy>
+                                                              <DataSetName>DataSet1</DataSetName>
+                                                              <Height>0.64in</Height>
+                                                              <Width>6in</Width>
+                                                              <Style />
+                                                            </Tablix>
+                                                          </ReportItems>
+                                                          <KeepTogether>true</KeepTogether>
+                                                          <Style />
+                                                        </Rectangle>
+                                                      </CellContents>
+                                                    </TablixCell>
+                                                  </TablixCells>
+                                                </TablixRow>
+                                              </TablixRows>
+                                            </TablixBody>
+                                            <TablixColumnHierarchy>
+                                              <TablixMembers>
+                                                <TablixMember />
+                                              </TablixMembers>
+                                            </TablixColumnHierarchy>
+                                            <TablixRowHierarchy>
+                                              <TablixMembers>
+                                                <TablixMember>
+                                                  <Group Name="list1_CAT_NAME">
+                                                    <GroupExpressions>
+                                                      <GroupExpression>=Fields!CAT_NAME.Value</GroupExpression>
+                                                    </GroupExpressions>
+                                                    <PageBreak>
+                                                      <BreakLocation>Between</BreakLocation>
+                                                    </PageBreak>
+                                                  </Group>
+                                                  <SortExpressions>
+                                                    <SortExpression>
+                                                      <Value>=Fields!CAT_NAME.Value</Value>
+                                                    </SortExpression>
+                                                  </SortExpressions>
+                                                  <DataElementOutput>Output</DataElementOutput>
+                                                  <KeepTogether>true</KeepTogether>
+                                                </TablixMember>
+                                              </TablixMembers>
+                                            </TablixRowHierarchy>
+                                            <DataSetName>DataSet1</DataSetName>
+                                            <PageBreak>
+                                              <BreakLocation>End</BreakLocation>
+                                            </PageBreak>
+                                            <Top>0.5in</Top>
+                                            <Height>1.14in</Height>
+                                            <Width>6in</Width>
+                                            <Style>
+                                              <FontFamily>Tahoma</FontFamily>
+                                            </Style>
+                                          </Tablix>
+                                          <Textbox Name="PRO_DESCRIPT">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>Description: </Value>
+                                                    <Style>
+                                                      <FontFamily>Tahoma</FontFamily>
+                                                      <FontWeight>Bold</FontWeight>
+                                                    </Style>
+                                                  </TextRun>
+                                                  <TextRun>
+                                                    <Value>=Fields!PRO_DESCRIPT.Value</Value>
+                                                    <Style>
+                                                      <FontFamily>Tahoma</FontFamily>
+                                                    </Style>
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style />
+                                              </Paragraph>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>Categorie:</Value>
+                                                    <Style>
+                                                      <FontFamily>Tahoma</FontFamily>
+                                                      <FontWeight>Bold</FontWeight>
+                                                    </Style>
+                                                  </TextRun>
+                                                  <TextRun>
+                                                    <Value xml:space="preserve"> </Value>
+                                                    <Style>
+                                                      <FontFamily>Tahoma</FontFamily>
+                                                    </Style>
+                                                  </TextRun>
+                                                  <TextRun>
+                                                    <Value>=Fields!CAT_NAME.Value</Value>
+                                                    <Style>
+                                                      <FontFamily>Tahoma</FontFamily>
+                                                    </Style>
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style />
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <rd:DefaultName>PRO_DESCRIPT</rd:DefaultName>
+                                            <Height>0.24in</Height>
+                                            <Width>6in</Width>
+                                            <ZIndex>1</ZIndex>
+                                            <Style>
+                                              <PaddingLeft>2pt</PaddingLeft>
+                                              <PaddingRight>2pt</PaddingRight>
+                                              <PaddingTop>2pt</PaddingTop>
+                                              <PaddingBottom>2pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </ReportItems>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Style />
+                                      </Rectangle>
+                                    </CellContents>
+                                  </TablixCell>
+                                </TablixCells>
+                              </TablixRow>
+                            </TablixRows>
+                          </TablixBody>
+                          <TablixColumnHierarchy>
+                            <TablixMembers>
+                              <TablixMember />
+                            </TablixMembers>
+                          </TablixColumnHierarchy>
+                          <TablixRowHierarchy>
+                            <TablixMembers>
+                              <TablixMember>
+                                <Group Name="list1_PRO_DESCRIPT">
+                                  <GroupExpressions>
+                                    <GroupExpression>=Fields!PRO_DESCRIPT.Value</GroupExpression>
+                                  </GroupExpressions>
+                                  <PageBreak>
+                                    <BreakLocation>Between</BreakLocation>
+                                  </PageBreak>
+                                </Group>
+                                <SortExpressions>
+                                  <SortExpression>
+                                    <Value>=Fields!PRO_DESCRIPT.Value</Value>
+                                  </SortExpression>
+                                </SortExpressions>
+                                <DataElementOutput>Output</DataElementOutput>
+                                <KeepTogether>true</KeepTogether>
+                              </TablixMember>
+                            </TablixMembers>
+                          </TablixRowHierarchy>
+                          <DataSetName>DataSet1</DataSetName>
+                          <PageBreak>
+                            <BreakLocation>End</BreakLocation>
+                          </PageBreak>
+                          <Top>0.5in</Top>
+                          <Height>1.64in</Height>
+                          <Width>6in</Width>
+                          <Style>
+                            <FontFamily>Tahoma</FontFamily>
+                            <FontSize>12pt</FontSize>
+                          </Style>
+                        </Tablix>
+                        <Textbox Name="PRO_NAME">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!PRO_NAME.Value</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>14pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>SlateGray</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>PRO_NAME</rd:DefaultName>
+                          <Top>0.01389in</Top>
+                          <Height>0.27in</Height>
+                          <Width>6in</Width>
+                          <ZIndex>1</ZIndex>
+                          <Style>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </ReportItems>
+                      <KeepTogether>true</KeepTogether>
+                      <Style />
+                    </Rectangle>
+                  </CellContents>
+                </TablixCell>
+              </TablixCells>
+            </TablixRow>
+          </TablixRows>
+        </TablixBody>
+        <TablixColumnHierarchy>
+          <TablixMembers>
+            <TablixMember />
+          </TablixMembers>
+        </TablixColumnHierarchy>
+        <TablixRowHierarchy>
+          <TablixMembers>
+            <TablixMember>
+              <Group Name="list1_PRO_NAME">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!PRO_NAME.Value</GroupExpression>
+                </GroupExpressions>
+                <PageBreak>
+                  <BreakLocation>Between</BreakLocation>
+                </PageBreak>
+              </Group>
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!PRO_NAME.Value</Value>
+                </SortExpression>
+              </SortExpressions>
+              <DataElementOutput>Output</DataElementOutput>
+              <KeepTogether>true</KeepTogether>
+            </TablixMember>
+          </TablixMembers>
+        </TablixRowHierarchy>
+        <DataSetName>DataSet1</DataSetName>
+        <PageBreak>
+          <BreakLocation>End</BreakLocation>
+        </PageBreak>
+        <Top>0.36in</Top>
+        <Height>2.47667in</Height>
+        <Width>6in</Width>
+        <Style>
+          <FontFamily>Tahoma</FontFamily>
+          <FontSize>14pt</FontSize>
+          <Color>SlateGray</Color>
+        </Style>
+      </Tablix>
+      <Textbox Name="textbox1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Customer Reviews</Value>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>20pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <Color>SteelBlue</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Height>0.36in</Height>
+        <Width>6in</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Chart Name="Chart1">
+        <ChartCategoryHierarchy>
+          <ChartMembers>
+            <ChartMember>
+              <Group Name="Chart1_CategoryGroup1">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!REV_DATE.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
+              <Label>=Fields!REV_DATE.Value</Label>
+            </ChartMember>
+          </ChartMembers>
+        </ChartCategoryHierarchy>
+        <ChartSeriesHierarchy>
+          <ChartMembers>
+            <ChartMember>
+              <Label>REV RATE</Label>
+            </ChartMember>
+          </ChartMembers>
+        </ChartSeriesHierarchy>
+        <ChartData>
+          <ChartSeriesCollection>
+            <ChartSeries Name="REV_RATE">
+              <ChartDataPoints>
+                <ChartDataPoint>
+                  <ChartDataPointValues>
+                    <Y>=Sum(Fields!REV_RATE.Value)</Y>
+                  </ChartDataPointValues>
+                  <ChartDataLabel>
+                    <Style />
+                  </ChartDataLabel>
+                  <Style />
+                  <ChartMarker>
+                    <Type>Auto</Type>
+                    <Style />
+                  </ChartMarker>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartDataPoint>
+              </ChartDataPoints>
+              <Type>Line</Type>
+              <Style />
+              <ChartEmptyPoints>
+                <Style />
+                <ChartMarker>
+                  <Style />
+                </ChartMarker>
+                <ChartDataLabel>
+                  <Style />
+                </ChartDataLabel>
+              </ChartEmptyPoints>
+              <ValueAxisName>Primary</ValueAxisName>
+              <CategoryAxisName>Primary</CategoryAxisName>
+              <ChartSmartLabel>
+                <CalloutLineColor>Black</CalloutLineColor>
+                <MinMovingDistance>0pt</MinMovingDistance>
+              </ChartSmartLabel>
+            </ChartSeries>
+          </ChartSeriesCollection>
+        </ChartData>
+        <ChartAreas>
+          <ChartArea Name="Default">
+            <ChartCategoryAxes>
+              <ChartAxis Name="Primary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Days</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Enabled>False</Enabled>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+              </ChartAxis>
+              <ChartAxis Name="Secondary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Axis Title</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Enabled>False</Enabled>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Location>Opposite</Location>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+              </ChartAxis>
+            </ChartCategoryAxes>
+            <ChartValueAxes>
+              <ChartAxis Name="Primary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Rate</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+              </ChartAxis>
+              <ChartAxis Name="Secondary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Axis Title</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Location>Opposite</Location>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+              </ChartAxis>
+            </ChartValueAxes>
+            <Style>
+              <BackgroundGradientType>None</BackgroundGradientType>
+            </Style>
+          </ChartArea>
+        </ChartAreas>
+        <ChartLegends>
+          <ChartLegend Name="Legende">
+            <Style>
+              <BackgroundGradientType>None</BackgroundGradientType>
+              <FontSize>8pt</FontSize>
+            </Style>
+            <ChartLegendTitle>
+              <Caption />
+              <Style>
+                <FontSize>8pt</FontSize>
+                <FontWeight>Bold</FontWeight>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </ChartLegendTitle>
+            <HeaderSeparatorColor>Black</HeaderSeparatorColor>
+            <ColumnSeparatorColor>Black</ColumnSeparatorColor>
+          </ChartLegend>
+        </ChartLegends>
+        <ChartTitles>
+          <ChartTitle Name="Default">
+            <Caption>Rates per Day</Caption>
+            <Style>
+              <BackgroundGradientType>None</BackgroundGradientType>
+              <FontWeight>Bold</FontWeight>
+              <TextAlign>General</TextAlign>
+              <VerticalAlign>Top</VerticalAlign>
+            </Style>
+          </ChartTitle>
+        </ChartTitles>
+        <Palette>BrightPastel</Palette>
+        <ChartBorderSkin>
+          <Style>
+            <BackgroundColor>Gray</BackgroundColor>
+            <BackgroundGradientType>None</BackgroundGradientType>
+            <Color>White</Color>
+          </Style>
+        </ChartBorderSkin>
+        <ChartNoDataMessage Name="NoDataMessage">
+          <Caption>No Data Available</Caption>
+          <Style>
+            <BackgroundGradientType>None</BackgroundGradientType>
+            <TextAlign>General</TextAlign>
+            <VerticalAlign>Top</VerticalAlign>
+          </Style>
+        </ChartNoDataMessage>
+        <DataSetName>DataSet1</DataSetName>
+        <Left>6.04167in</Left>
+        <Height>2.83667in</Height>
+        <Width>4.11792in</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>Solid</Style>
+          </Border>
+          <BackgroundColor>White</BackgroundColor>
+          <BackgroundGradientType>None</BackgroundGradientType>
+        </Style>
+      </Chart>
+    </ReportItems>
+    <Height>2.83667in</Height>
+    <Style />
+  </Body>
+  <Width>10.57278in</Width>
+  <Page>
+    <LeftMargin>1in</LeftMargin>
+    <RightMargin>1in</RightMargin>
+    <TopMargin>1in</TopMargin>
+    <BottomMargin>1in</BottomMargin>
+    <Style />
+  </Page>
+  <EmbeddedImages>
+    <EmbeddedImage Name="Reviews_Icon">
+      <MIMEType>image/jpeg</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <Language>en-US</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportID>703b427b-3a59-4d85-8497-7ea6698db279</rd:ReportID>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+</Report>
